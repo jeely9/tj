@@ -1,0 +1,182 @@
+*{
+	font-family: "微软雅黑";
+}
+i{
+	font-style: normal;
+}
+.header{
+	width: 100%;
+	height: 66px;
+	background: #07549c;
+}
+
+.left{float: left;}
+.right{float: right;}
+
+.logo{
+	width: 178px;
+	height: 66px;
+	text-align: center;
+	display: table-cell;
+ 	vertical-align:middle;
+}
+
+.logo img{
+	vertical-align: middle;
+}
+
+.title{
+	width: 368px;
+	height: 48px;
+	line-height: 66px;
+	font-size: 28px;
+	color: #fff;
+	text-align: center;
+}
+
+.slide{
+	display: inline-block;
+	width: 4px;
+	height: 46px;
+	background: #0967c0;
+	margin-top: 10px;
+}
+
+.time{
+	width: 212px;
+	height: 33px;
+	margin-top: 34px;
+	color: #fff;
+	margin-right: 70px;
+}
+
+.time span{
+	width: 94px;
+	height: 20px;
+	background: #0967bf;
+	color: #fff;
+}
+
+.time a{
+	margin-left: 22px;
+	color: #fff;
+	font-size: 14px;
+}
+
+.center{
+	width: 100%;
+	height: 654px;
+}
+
+.menu{
+	width: 14%;
+	height: 654px;
+	background: #2d3951;
+}
+
+.menu li{
+	height: 66px;
+	line-height: 66px;
+}
+
+.active{
+	background: #3b4f72 url(../img/tou-b.png) no-repeat 130px center;
+}
+
+
+.menu li a{
+	font-size: 18px;
+	color: #fff;
+	//font-weight: bolder;
+	margin-left: 40px;
+}
+
+.menu li span {
+	margin-left: 14px;
+}
+#spe{
+	//margin-left: 1px;
+}
+
+.container{
+	width: 86%;
+	height: 654px;
+	background: #f2f2f2;
+}
+
+.box{
+	margin: 30px auto;
+	width: 96%;
+	height: 578px;
+	background: #fff;
+	border-radius: 10px;
+}
+
+.box-header{
+	height: 40px;
+	background: #6384bf;
+	border-radius: 10px 10px 0 0;
+}
+
+.box-header img{
+	margin-left: 26px;
+}
+
+.box-header input{
+	display: inline-block;
+	border: none;
+	margin-left: 4px;
+	margin-top: 10px;
+}
+
+.box-header p{
+	display: inline-block;
+	color: #7297db;
+	text-align: center;
+	margin-left: 6px;
+}
+
+.box-center{
+	width: 96%;
+	height: 488px;
+	margin: 22px 26px;
+}
+
+#sea{
+	cursor: pointer;
+	margin-left: 10px;
+	color: #fff;
+	font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+	display: inline-block;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	color: #bcbcbc;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>同济大学</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="css/dcalendar.picker.css"/>
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+	</head>
+	<body>
+		<div class="header clearfix">
+			<div class="logo left"><img src="img/logo.jpg"/></div>
+			<div class="slide left"></div>
+			<div class="title left">同心云舆情综合分析平台</div>
+			<div class="time right">当前日期 <span id="pretime"></span><a href="../inter.html">返回首页</a></div>
+		</div>
+		<div class="center">
+			<div class="menu left">
+				<li class="active">
+					<a href="index.html">总体情况</a>
+					<span><!--<img src="img/tou-r.png"/>--></span>
+				</li>
+				<li>
+					<a href="html/dept.html">部门口碑</a>
+					<span id="spe"><img src="img/tou-r.png"/></span>
+				</li>
+				<li>
+					<a href="html/hot.html">热点事件</a>
+					<span><img src="img/tou-r.png"/></span>
+				</li>
+				<li>
+					<a href="html/report.html">舆情周报</a>
+					<span><img src="img/tou-r.png"/></span>
+				</li>
+			</div>
+			<div class="container right">
+				<div class="box">
+					<div class="box-header">
+						<img src="img/cal.png"/>
+						<input id='mydatepicker' type='text'/><p>——</p>
+						<input id='mydatepicker2' type='text'/>
+						<span id="sea">搜索</span>
+					</div>
+					<div class="box-center">
+						<div class="box-center-t clearfix">
+							<div class="box-center-t-l left">
+								<p class="box-center-header">
+									<span class="atitle">舆情指数</span>
+									<span type="button" class="exp" data-toggle="popover" title="说明" data-content="舆情指数是:每天发送微博的数量">?</span>
+									<span class="atitle-r">舆情总数: <i id="count">23444</i>条</span>
+								</p>
+								<div class="introline" id="introline"></div>
+							</div>
+							<div class="box-center-t-r right">
+								<p class="box-center-header">
+									<span class="atitle">情感指数</span>
+									<span type="button" class="exp" data-toggle="popover" title="说明" data-content="情感指数是:如果正面的次数多：结果值=总（正面词）/总（正面词+负面词）；偏向正面（正值）；
+      	如果负面的次数多：结果值=总（负面词）/总（正面词+负面词）：偏向负面（负值）；">?</span>
+								</p>
+								<div class="motion" id="motion"></div>
+								<p class="motiontip"><span class="mof">负面<i id="mofnum">2</i>条</span><span class="moz">正面<i id="moznum">132</i>条</span></p>
+							</div>
+						</div>
+						<div class="box-center-m clearfix">
+							<div class="box-center-m-l left">
+								<p class="box-center-header">
+									<span class="atitle">部门整体情况</span>
+									<!--<span type="button" class="exp" data-toggle="popover" title="说明" data-content="部门整体情况是">?</span>-->
+									<!--<span class="atitle-r">未消: <i>234</i>条</span>-->
+								</p>
+								<div class="deptinfo" id="deptinfo"></div>
+							</div>
+							<div class="box-center-m-r right">
+								<p class="box-center-header">
+									<span class="atitle">敏感过滤</span>
+									<!--<span type="button" class="exp" data-toggle="popover" title="说明" data-content="敏感过滤是">?</span>-->
+								</p>
+								<div class="sensfilter" id="sensfilter"></div>
+								<p class="sensinfo">
+									<a data-toggle="modal" data-target="#myModal">涉及人数: <span id="sensnum">345</span></a>
+									<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+													<h4 class="modal-title" id="myModalLabel">详细信息</h4>
+												</div>
+												<div class="modal-body report_body">
+													<div id="modal_context" class="mbox"></div>
+													<ul class="pagination page" id="page">
+															<!-- <li><a href="#">&laquo;</a></li>
+															<li class="active"><a href="#">1</a></li>
+															<li><a href="#">2</a></li>
+															<li><a href="#">3</a></li>
+															<li><a href="#">4</a></li>
+															<li><a href="#">5</a></li>
+															<li><a href="#">&raquo;</a></li> -->
+													</ul>	
+												</div>
+											</div>
+										</div>
+									</div>
+								</p>
+							</div>
+						</div>
+						<div class="box-center-b clearfix">
+							<div class="box-center-b-l left">
+								<p class="box-center-header">
+									<span class="atitle">热词</span>
+									<!--<span type="button" class="exp" data-toggle="popover" title="说明" data-content="热词是">?</span>-->
+								</p>
+								
+								<iframe src="html/all-hotword.html" width="100%" height="232px" scrolling="no" style="border: none" name="parentifram"></iframe>
+							</div>
+							<div class="box-center-b-r right">
+								<p class="box-center-header">
+									<span class="atitle">情绪指数走势</span>
+									<span type="button" class="exp" data-toggle="popover" title="说明" data-content="情绪指数走势是:每天的情感数值">?</span>
+								</p>
+								<div class="motionline" id="motionline"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">&copy;同济大学信息办</div>
+	</body>
+	<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/dcalendar.picker.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/pagetion.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/all.js" type="text/javascript" charset="utf-8"></script>
+	
+</html>

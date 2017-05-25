@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.all-hotword{
+				width: 100%;
+				height: 232px;
+				overflow:-Scroll;
+				overflow-y:hidden
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="all-hotword" id="hotword" ></div>
+	</body>
+	<script src="../js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/echarts-all.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	var hotword = echarts.init(document.getElementById('hotword'));
+	function createRandomItemStyle() {
+	    return {
+	        normal: {
+	            color: 'rgb(' + [
+	                Math.round(Math.random() * 160),
+	                Math.round(Math.random() * 160),
+	                Math.round(Math.random() * 160)
+	            ].join(',') + ')'
+	        }
+	    };
+	}
+   	option = {
+	    title: {
+	        text: '',
+	        link: 'http://www.google.com/trends/hottrends'
+	    },
+	    tooltip: {
+	        show: true
+	    },
+	    series: [{
+	        name: '',
+	        type: 'wordCloud',
+	        size: ['80%', '80%'],
+	        textRotation : [0, 45, 90, -45],
+	        textPadding: 0,
+	        autoSize: {
+	            enable: true,
+	            minSize: 14
+	        },
+	        data:  [],
+	        //itemStyle:createRandomItemStyle()
+	        
+	    }]
+	};
+	
+	hotword.setOption(option);
+	function callback(data){
+	console.log(data);
+	var wordData = [];
+		hotword.showLoading();//加载动画
+		
+				hotword.hideLoading();
+				console.log(data);
+				wordData = [];
+				wordCloud=data.hortword;
+				console.log(wordCloud);
+				
+				for(var i=0;i<wordCloud.length;i++){
+					wordData.push({name:wordCloud[i].name,value:wordCloud[i].values,itemStyle: createRandomItemStyle()})
+					//console.log(wordData)
+				}
+		    	wordcloud(wordData);
+	}
+	callback();
+	function wordcloud(wordData){
+		hotword.clear();
+		hotword.setOption({
+			series:[{data:wordData}],
+		});
+		hotword.setOption(option);
+	}	
+		
+		
+	</script>
+</html>

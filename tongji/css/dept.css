@@ -1,0 +1,184 @@
+.sel-info{
+	float: right;
+	height: 40px;
+	line-height: 40px;
+	margin-right: 28px;
+}
+
+.deptinfo{
+	width: 122px;
+	height: 26px;
+	background: #7297db;
+	border: none;
+	color: #fff;
+}
+
+.box-center-left,.box-center-right{
+	width: 49%;
+	height: 488px;
+	border: 1px solid #f4f4f4;
+	border-radius:10px ;
+	padding-left: 18px;
+	position: relative;
+}
+
+.tip{
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+}
+
+.tip input{
+	margin-left: 24px;
+}
+.tip span{
+	//margin-left: 24px;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+
+.tip #plus{
+	color: #02b3c5;
+}
+
+.tip #minus{
+	color: #e97172;
+}
+
+.tip #neutral{
+	color: #ffbf53;
+}
+
+#sea{
+	cursor: pointer;
+	margin-left: 10px;
+	color: #fff;
+	font-size: 14px;
+}
+
+#list{
+	width: 476px;
+	height: 402px;
+	margin-bottom: 36px;
+}
+
+.infos{
+	width: 476px;
+	height: 70px;
+	margin-top: 30px;
+	font-family: "微软雅黑";
+}
+
+.infos b{
+	display: inline-block;
+	width: 30px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	border-radius: 50px;
+	color: #fff;
+}
+
+.minus{
+	background: #e97172;
+}
+
+.plus{
+	background: #02b3c5;
+}
+
+.neutral{
+	background: #ffbf53;
+}
+
+.infos li{
+	display: inline-block;
+	width: 436px;
+	height: 70px;
+	margin-left: 10px;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #808080;
+}
+.infos li p{
+	height:40px;
+	diplay:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:2;
+	overflow:hidden;
+}
+.infos li .info-tip{
+	margin-top: 10px;
+	color: #c5c5c5;
+}
+
+.info-resours{
+	margin-right: 8px;
+}
+
+.page{
+	margin: 0;
+	position: absolute;
+	bottom: 8px;
+	right: 15px;
+}
+.page a,.page span{
+	display:inline-block;
+	width:25px;
+	height:30px;
+	text-align:center;
+	line-height:30px;
+	border:1px solid #ccc;
+	margin:0px 5px;
+	border-radius:3px;
+}
+.page .start,.page .end{
+	width:40px;
+}
+.page .active{
+	background-color:skyblue;
+	color:white;
+}
+.box-center-right-t{
+	width: 98%;
+	height: 260px;
+	border-bottom: 1px solid #f4f4f4;
+}
+
+.box-center-right-b{
+	width: 98%;
+	height: 204px;
+	margin-top: 10px;
+}
+
+.box-center-right-b .dtitle{
+	display: inline-block;
+	width: 72px;
+	height: 22px;
+	line-height: 22px;
+	border-right: 4px solid #a48ad4;
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+
+.intotal{
+	float: right;
+	width: 94px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	background: #d1ddf3;
+	font-size: 14px;
+	color: #969ca7;
+	font-family: "微软雅黑";
+}
+
+.intotal i{
+	color: #ff7c00;
+	font-style: normal;
+}
+
+.dept-pie{
+	width: 100%;
+	height: 180px;
+}

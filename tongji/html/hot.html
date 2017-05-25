@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>热门话题</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/dcalendar.picker.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/hot.css"/>
+	</head>
+	<body>
+		<div class="header clearfix">
+			<div class="logo left"><img src="../img/logo.jpg"/></div>
+			<div class="slide left"></div>
+			<div class="title left">同心云舆情综合分析平台</div>
+			<div class="time right">当前日期 <span id="pretime"></span></div>
+		</div>
+		<div class="center">
+			<div class="menu left">
+				<li>
+					<a href="../index.html">总体情况</a>
+					<span><img src="../img/tou-r.png"/></span>
+				</li>
+				<li>
+					<a href="dept.html">部门口碑</a>
+					<span id="spe"><img src="../img/tou-r.png"/></span>
+				</li>
+				<li class="active">
+					<a href="hot.html">热点事件</a>
+					<!--<span><img src="../img/tou-r.png"/></span>-->
+				</li>
+				<li>
+					<a href="report.html">舆情周报</a>
+					<span><img src="../img/tou-r.png"/></span>
+				</li>
+			</div>
+			<div class="container right">
+				<div class="box clearfix">
+					<div class="box-header">
+						<img src="../img/cal.png"/>
+						<input id='mydatepicker' type='text'/><p>——</p>
+						<input id='mydatepicker2' type='text'/>
+						<span id="sea">搜索</span>
+					</div>
+					<div class="box-center clearfix">
+						<div class="left-word left">
+							<p><span class="htitle">热词动态</span></p>
+							<div id="word" class="word"></div>
+						</div>
+						<div class="right-topic right">
+							<p><span class="htitle">热点话题</span></p>
+							<ul id="hot_topic"></ul>
+							
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							  	<div class="modal-dialog" role="document">
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								        <h4 class="modal-title" id="myModalLabel">
+								        	<!--<img src="../img/search.png"/>
+								        	<input type="search" class="msearch"/>-->
+								        	<span>微博详情</span>
+								        </h4>
+								      </div>
+								      <div class="modal-body">
+								        <div id="modal_context" class="mbox"></div>
+								        <div class="mtotal">
+								        	<span>微博数: <i id="weibo">300</i></span>
+								        	<span>转发数: <i id="zhuanfa">3000</i></span>
+								        	<span>评论数: <i id="comment">30000</i></span>
+								        </div>
+								      </div>
+								      <div class="modal-footer">
+								        <span>正面:<i id="res_zheng">800</i>人</span>
+								        <span>负面:<i id="res_fu">300</i>人</span>
+								        <span>中立:<i id="res">1000</i>人</span>
+								      </div>
+								    </div>
+							  	</div>
+							</div>
+							
+						</div>
+						<div class="trend">
+							<p><span class="htitle">舆情走势</span></p>
+							<div id="line" class="line"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">&copy;同济大学信息办</div>
+	</body>
+	<script src="../js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/dcalendar.picker.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="../js/echarts.min.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="../js/echarts-all.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/hot.js" type="text/javascript" charset="utf-8"></script>
+</html>

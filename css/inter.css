@@ -1,0 +1,68 @@
+.container{
+	width: 100%;
+	height: 620px;
+	background: url(../img/bg.png) no-repeat center; 
+	background-size: cover;
+}
+.box{
+	position: absolute;
+	width: 324px;
+	height: 304px;
+	left: 50%;
+	top: 50%;
+	margin-left: -162px;
+	margin-top: -152px;
+	z-index: 999;
+	border-radius: 16px;
+	background: url(../img/box.png) no-repeat  center 1px;
+}
+.logo{
+	width: 106px;
+	height: 102px;
+	background: url(../img/inlogo.png) no-repeat  center;
+	margin-top: 74px;
+	margin-left: 33%;
+}
+.manage{
+	width: 188px;
+	height: 30px;
+	background: #9a99ff;
+	margin-left: 20%;
+    margin-top: 8%;
+    border-radius: 10px;
+}
+.manage a{
+	display: inline-block;
+    width: 100%;
+	height: 30px;
+	color: #fff;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	text-align: center;
+	line-height: 30px;
+}
+.anasy{
+	width: 188px;
+	height: 30px;
+	background: #ccccfe;
+	margin-left: 20%;
+    margin-top: 4%;
+    border-radius: 10px;
+}
+.anasy a{
+	display: inline-block;
+    width: 100%;
+	height: 30px;
+	color: #340e71;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	text-align: center;
+	line-height: 30px;
+}
+.footer{
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	margin-top: 10px;
+}

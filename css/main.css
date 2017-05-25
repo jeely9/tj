@@ -1,0 +1,94 @@
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+	
+}
+
+.header{
+	width: 100%;
+	height: 56px;
+	background: #2d7aa8;
+	color: #fff;
+}
+
+.headerbox{
+	height: 56px;
+	line-height: 56px;
+}
+.title{
+	height: 56px;
+	line-height: 56px;
+	text-align: center;
+	font-size: 36px;
+	margin-left: 72px;
+}
+
+.headertitle ul{
+	margin-left: 76%;
+}
+
+.headertitle ul li{
+	float: left;
+	line-height: 56px;
+	text-align: center;
+	font-size: 22px;
+	margin-left: 10px;
+}
+
+.headertitle ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.back{
+	height: 56px;
+	line-height: 56px;
+}
+
+.back a{
+	color: #fff;
+	margin-left: 68px;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.active{
+	border-bottom: 2px solid #fff;
+}
+
+.containerbox{
+	width: 100%;
+	margin-top: 30px;
+}
+
+
+table thead tr th{
+	text-align: center;
+}
+
+table tr .edit{
+	margin-right: 4px;
+}
+
+table tr td button{
+	display: inline-block;
+}
+
+table tr td .add{
+	margin-right: 4px;
+	
+}
+.footer{
+	width: 100%;
+	min-height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background:#2d7aa8;
+	color: #fff;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}

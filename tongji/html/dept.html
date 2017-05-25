@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>部门口碑</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/dept.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/dcalendar.picker.css"/>
+		
+	</head>
+	<body>
+		<div class="header clearfix">
+			<div class="logo left"><img src="../img/logo.jpg"/></div>
+			<div class="slide left"></div>
+			<div class="title left">同心云舆情综合分析平台</div>
+			<div class="time right">当前日期 <span id="pretime"></span></div>
+		</div>
+		<div class="center">
+			<div class="menu left">
+				<li>
+					<a href="../index.html">总体情况</a>
+					<span><img src="../img/tou-r.png"/></span>
+				</li>
+				<li class="active">
+					<a href="dept.html">部门口碑</a>
+					<!--<span id="spe"><img src="../img/tou-r.png"/></span>-->
+				</li>
+				<li>
+					<a href="hot.html">热点事件</a>
+					<span><img src="../img/tou-r.png"/></span>
+				</li>
+				<li>
+					<a href="report.html">舆情周报</a>
+					<span><img src="../img/tou-r.png"/></span>
+				</li>
+			</div>
+			<div class="container right">
+				<div class="box">
+					<div class="box-header">
+						<img src="../img/cal.png"/>
+						<input id='mydatepicker' type='text'/><p>——</p>
+						<input id='mydatepicker2' type='text'/>
+						<span id="sea">搜索</span>
+						<div class="sel-info">
+							<img src="../img/deptphoto.png"/>
+							<select id="deptinfo" name="deptinfo" class="deptinfo" onchange="Dateval()"> 
+								<option value="0" selected = "selected">信息办</option> 
+								<option value="1">教务处</option> 
+								<option value="2">嘉定管委办</option> 
+								<option value="3">保卫处</option>
+								<option value="4">研究生院</option>
+								<option value="5">图书馆</option>
+								<option value="6">后勤</option>
+								<option value="7">团委</option>
+								<option value="8">校医院</option>
+								<option value="9">学生处</option>
+								<option value="10">财务处</option>
+							</select> 
+						</div>
+					</div>
+					<div class="box-center clearfix">
+						<div class="box-center-left left" id="boxList">
+							<div class="tip" id="tip">
+								<input type="checkbox" id="pluscheck" value="1" name="test"/><span id="plus">正面</span>
+								<input type="checkbox" id="minuscheck" value="2" name="test"/><span id="minus">负面</span>
+								<input type="checkbox" id="meutcheck" value="3" name="test"/><span id="neutral">中立</span>
+							</div>
+							<div id="list">
+								<!--<ul class="infos clearfix">
+									<b class="left minus">负</b>
+									<li class="left"><p>有网友爆料称,12月27日，同济大学一位女生掉入水中，原因竟是低头玩手机，没有看路，不小心掉进去的。在这寒冷的冬日，小编想想都冷飕飕的。</p>
+											<p class="info-tip"><span class="info-resours">山西信息港</span><span class="info-date">2016-12-26</span></p>
+									</li>
+									</ul>
+									<ul class="infos clearfix">
+										<b class="left plus">正</b>
+										<li class="left"><p>有网友爆料称,12月27日，同济大学一位女生掉入水中，原因竟是低头玩手机，没有看路，不小心掉进去的。在这寒冷的冬日，小编想想都冷飕飕的。</p>
+											<p class="info-tip"><span class="info-resours">山西信息港</span><span class="info-date">2016-12-26</span></p>
+										</li>
+									</ul>
+									<ul class="infos clearfix">
+										<b class="left neutral">中</b>
+										<li class="left"><p>有网友爆料称,12月27日，同济大学一位女生掉入水中，原因竟是低头玩手机，没有看路，不小心掉进去的。在这寒冷的冬日，小编想想都冷飕飕的。</p>
+											<p class="info-tip"><span class="info-resours">山西信息港</span><span class="info-date">2016-12-26</span></p>
+										</li>
+									</ul>
+									<ul class="infos clearfix">
+										<b class="left plus">正</b>
+										<li class="left"><p>有网友爆料称,12月27日，同济大学一位女生掉入水中，原因竟是低头玩手机，没有看路，不小心掉进去的。在这寒冷的冬日，小编想想都冷飕飕的。</p>
+											<p class="info-tip"><span class="info-resours">山西信息港</span><span class="info-date">2016-12-26</span></p>
+										</li>
+									</ul>-->	
+							</div>
+							
+							<ul class="pagination page" id="page">
+									<!--<li><a href="#">&laquo;</a></li>
+									<li class="active"><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a href="#">&raquo;</a></li>-->
+							</ul>
+							<!--<div id="pages"></div>-->
+						</div>
+						<div class="box-center-right right">
+							<div class="box-center-right-t" id="word"></div>
+							<div class="box-center-right-b">
+								<p><span class="dtitle">部门指数</span><span class="intotal">共<i id="totalNum"></i>篇报导</span></p>
+								<div class="dept-pie" id="pie"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">&copy;同济大学信息办</div>
+	<script src="../js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/dcalendar.picker.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/echarts-all.js"></script>
+	<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/pagetion.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/dept.js" type="text/javascript" charset="utf-8"></script>
+	
+	</body>
+	
+</html>
